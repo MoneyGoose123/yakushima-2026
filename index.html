@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌿 屋久島旅のしおり 2026年4月</title>
+  <style>
+    :root {
+      --green: #2d6a4f;
+      --green-light: #52b788;
+      --green-bg: #d8f3dc;
+      --yellow: #f4a261;
+      --red: #e76f51;
+      --blue: #457b9d;
+      --gray: #6c757d;
+      --white: #fff;
+      --bg: #f8fffe;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      background: var(--bg);
+      color: #222;
+      line-height: 1.7;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #52b788 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero h1 { font-size: 2.4rem; font-weight: 900; letter-spacing: 0.05em; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .hero .subtitle { font-size: 1.1rem; margin-top: 12px; opacity: 0.9; }
+    .hero .meta { margin-top: 20px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .hero .meta span {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 900px; margin: 0 auto; padding: 32px 16px; }
+
+    /* ===== ALERT ===== */
+    .alert {
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .alert-red { background: #fdecea; border-left: 4px solid var(--red); color: #8b1a1a; }
+    .alert-yellow { background: #fff8e1; border-left: 4px solid #f4a261; color: #7d4e00; }
+    .alert-blue { background: #e8f4fd; border-left: 4px solid var(--blue); color: #1a3d5c; }
+    .alert-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ===== SECTION ===== */
+    .section { margin-bottom: 40px; }
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--green);
+      border-bottom: 3px solid var(--green-light);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .card-header {
+      background: var(--green);
+      color: white;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-header.yellow { background: #e07b39; }
+    .card-header.blue { background: var(--blue); }
+    .card-header.teal { background: #1d7a73; }
+    .card-body { padding: 16px 20px; }
+
+    /* ===== TABLE ===== */
+    .tbl { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+    .tbl th { background: var(--green-bg); color: var(--green); font-weight: 700; padding: 8px 12px; text-align: left; }
+    .tbl td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+    .tbl tr:last-child td { border-bottom: none; }
+    .tbl tr:hover td { background: #f5fdf7; }
+
+    /* ===== SCHEDULE ===== */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--green-light), #ccc);
+    }
+    .tl-item { position: relative; margin-bottom: 14px; }
+    .tl-dot {
+      position: absolute;
+      left: -26px; top: 4px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--green-light);
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--green-light);
+    }
+    .tl-dot.red { background: var(--red); box-shadow: 0 0 0 2px var(--red); }
+    .tl-dot.yellow { background: var(--yellow); box-shadow: 0 0 0 2px var(--yellow); }
+    .tl-time { font-size: 0.8rem; color: var(--gray); font-weight: 600; }
+    .tl-content { font-size: 0.94rem; }
+    .tl-content strong { color: var(--green); }
+    .tl-note { font-size: 0.82rem; color: var(--gray); margin-top: 2px; }
+
+    .day-label {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    /* ===== CHECKLIST ===== */
+    .checklist { list-style: none; }
+    .checklist li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: '☐';
+      font-size: 1.1rem;
+      color: var(--green-light);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .checklist li.done::before { content: '✅'; }
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .badge-red { background: #fdecea; color: var(--red); border: 1px solid var(--red); }
+    .badge-yellow { background: #fff8e1; color: #c07000; border: 1px solid #f4a261; }
+    .badge-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-light); }
+
+    /* ===== MEMBER GRID ===== */
+    .member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .member-card {
+      background: white;
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-top: 3px solid var(--green-light);
+    }
+    .member-card.leader { border-top-color: var(--yellow); }
+    .member-name { font-weight: 700; font-size: 0.97rem; }
+    .member-sub { font-size: 0.8rem; color: var(--gray); margin-top: 4px; }
+
+    /* ===== RISK TABLE ===== */
+    .risk-table td:first-child { font-weight: 600; white-space: nowrap; }
+
+    /* ===== COST TABLE ===== */
+    .cost-total { background: var(--green-bg) !important; font-weight: 700; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--green);
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero .meta { gap: 10px; }
+      .section-title { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>🌿 屋久島旅のしおり</h1>
+  <p class="subtitle">2026年4月13日(月)〜16日(木) 3泊4日</p>
+  <div class="meta">
+    <span>📍 屋久島・鹿児島県</span>
+    <span>👥 6〜7名</span>
+    <span>🥾 縄文杉トレッキング</span>
+    <span>🍖 BBQ</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ALERTS -->
+  <div class="section">
+    <div class="alert alert-red">
+      <span class="alert-icon">🚨</span>
+      <div><strong>【最重要】荒川登山口はマイカー乗り入れ禁止</strong>（4月〜シーズン中）<br>
+      レンタカーで直接行けません。屋久杉自然館前から<strong>シャトルバス</strong>を利用。4/14の出発時刻に合わせてバス時刻を今すぐ確認！</div>
+    </div>
+    <div class="alert alert-red">
+      <span class="alert-icon">🚨</span>
+      <div><strong>【要確認】縄文杉ガイドの全員分予約</strong><br>
+      中村組3名分は連絡済み。永廣組4名分の申込み状況を確認すること。</div>
+    </div>
+    <div class="alert alert-yellow">
+      <span class="alert-icon">⚠️</span>
+      <div><strong>登山弁当は前日予約が必要な可能性あり</strong><br>
+      当日15:30頃の予約では翌朝4:30出発分に間に合わない店舗が多い。事前にショップへ確認を。</div>
+    </div>
+    <div class="alert alert-yellow">
+      <span class="alert-icon">⚠️</span>
+      <div><strong>花田先輩の参加可否を早急に確定</strong><br>
+      弁当・ガイド・宿泊の人数に影響します。</div>
+    </div>
+  </div>
+
+  <!-- MEMBERS -->
+  <div class="section">
+    <div class="section-title">👥 メンバー</div>
+    <div style="margin-bottom:12px; font-size:0.9rem; color:var(--gray)">
+      中村組（空港着）・永廣組（フェリー着）の2グループで移動
+    </div>
+    <div class="member-grid">
+      <div class="member-card leader">
+        <div class="member-name">🎯 中村 大祐</div>
+        <div class="member-sub">中村組 ／ 幹事<br>群馬から参加</div>
+      </div>
+      <div class="member-card">
+        <div class="member-name">横山 雄哉</div>
+        <div class="member-sub">中村組<br>羽田経由・35,000マイル</div>
+      </div>
+      <div class="member-card">
+        <div class="member-name">西山 俊介</div>
+        <div class="member-sub">中村組</div>
+      </div>
+      <div class="member-card" style="border-top-color:#e76f51;">
+        <div class="member-name">花田 先輩 <span class="badge badge-red">調整中</span></div>
+        <div class="member-sub">中村組<br>参加可否を確定してください</div>
+      </div>
+      <div class="member-card leader">
+        <div class="member-name">🎯 永廣 理人</div>
+        <div class="member-sub">永廣組 ／ 宿手配担当<br>12日鹿児島入り</div>
+      </div>
+      <div class="member-card">
+        <div class="member-name">takuya kawashima</div>
+        <div class="member-sub">永廣組<br>永廣さんの紹介</div>
+      </div>
+      <div class="member-card">
+        <div class="member-name">yoshimi</div>
+        <div class="member-sub">永廣組<br>スタッフ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCESS -->
+  <div class="section">
+    <div class="section-title">✈️ アクセス・レンタカー</div>
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">🏔 中村組（横山さん含む）</div>
+      <div class="card-body">
+        <table class="tbl">
+          <tr><td>移動手段</td><td>飛行機（鹿児島乗り換え）→ 屋久島空港</td></tr>
+          <tr><td>到着時刻</td><td><strong>11:10 屋久島空港着</strong></td></tr>
+          <tr><td>レンタカー</td><td>屋久島空港付近 ／ 1台（バンタイプ推奨）</td></tr>
+          <tr><td>横山さん</td><td>羽田発（朝6時の電車）→ 鹿児島経由で合流</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header blue">⛴ 永廣組（4名）</div>
+      <div class="card-body">
+        <table class="tbl">
+          <tr><td>4/12(日)</td><td>鹿児島着・夜に食事</td></tr>
+          <tr><td>移動手段</td><td>高速フェリー（トッピー/ロケット）→ 安房港</td></tr>
+          <tr><td>到着時刻</td><td><strong>15:25 安房港着</strong></td></tr>
+          <tr><td>レンタカー</td><td>安房港付近 ／ 1台（バンタイプ推奨）</td></tr>
+          <tr><td>フェリー代</td><td>往復 約14,000円/人（チケット要確認）</td></tr>
+        </table>
+        <div class="alert alert-yellow" style="margin-top:12px; margin-bottom:0;">
+          <span class="alert-icon">⚠️</span>
+          <div>フェリーは荒天時に欠航あり。欠航時の代替ルート（飛行機振替）を事前に確認しておくこと</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="section">
+    <div class="section-title">📅 日程表</div>
+
+    <!-- 4/12 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header blue">4月12日（日）― 前乗り組（永廣組のみ）</div>
+      <div class="card-body">
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">午後</div><div class="tl-content">鹿児島着</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">夜</div><div class="tl-content">永廣グループで食事🍜</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4/13 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header">4月13日（月）― 準備と決起集会</div>
+      <div class="card-body">
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">11:10</div>
+            <div class="tl-content"><strong>中村組・屋久島空港着</strong> → レンタカー受取</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot yellow"></div>
+            <div class="tl-time">11:10〜15:00</div>
+            <div class="tl-content"><strong>中村組：先行行動</strong></div>
+            <div class="tl-note">食事・登山装備レンタル店の下見・買い出し準備</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">15:25</div>
+            <div class="tl-content"><strong>永廣組・安房港着</strong> → レンタカー受取</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">16:00</div>
+            <div class="tl-content"><strong>🤝 2グループ合流！</strong></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot red"></div>
+            <div class="tl-time">16:30</div>
+            <div class="tl-content"><strong>【必須】登山装備レンタル</strong>（安房のショップ・6〜7人分）</div>
+            <div class="tl-note">✅ 翌日の登山弁当（朝・昼）を人数分予約 ← 前日予約必須！<br>✅ 携帯トイレを1人2〜3枚購入</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">17:00</div>
+            <div class="tl-content"><strong>買い出し</strong>🛒（15日BBQ用：酒・肉・地魚・野菜）</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">19:00</div>
+            <div class="tl-content"><strong>前夜祭夕食</strong>🍻（安房で軽く）</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot red"></div>
+            <div class="tl-time">21:00</div>
+            <div class="tl-content"><strong>就寝</strong>💤 ← 飲みすぎ注意！翌朝4:00起き</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4/14 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header" style="background:#1b4332;">4月14日（火）― 縄文杉トレッキング【限界突破の日】🥾</div>
+      <div class="card-body">
+        <div class="alert alert-red" style="margin-bottom:14px;">
+          <span class="alert-icon">🚨</span>
+          <div><strong>荒川登山口はマイカー禁止！</strong> 屋久杉自然館前からシャトルバスで移動。始発バスの時刻を確認して逆算すること。</div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">04:00</div><div class="tl-content">起床・準備・弁当受取</div></div>
+          <div class="tl-item">
+            <div class="tl-dot red"></div>
+            <div class="tl-time">04:30頃</div>
+            <div class="tl-content"><strong>シャトルバス乗り場へ出発</strong></div>
+            <div class="tl-note">屋久杉自然館前 → 荒川登山口</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot red"></div>
+            <div class="tl-time">05:30頃</div>
+            <div class="tl-content"><strong>縄文杉トレッキング 出発！</strong>🌲</div>
+            <div class="tl-note">ガイド付き ／ 往復約22km ／ 累積標高差約600m ／ 所要約10時間<br>費用：ガイド＋装備レンタル 約13,000円/人 ＋ 環境保全協力金 1,000円/人</div>
+          </div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">15:30〜16:00</div><div class="tl-content"><strong>下山</strong>（余裕を持った想定）</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">17:00</div><div class="tl-content"><strong>温泉</strong>💆（筋肉回復！）</div></div>
+          <div class="tl-item">
+            <div class="tl-dot yellow"></div>
+            <div class="tl-time">19:30</div>
+            <div class="tl-content"><strong>🎉 登頂祝い！居酒屋で大飲み会</strong>🍶</div>
+            <div class="tl-note">屋久島グルメ＋焼酎を満喫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4/15 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-header yellow">4月15日（水）― 絶景＆BBQパーティー🍖</div>
+      <div class="card-body">
+        <div class="alert alert-yellow" style="margin-bottom:14px;">
+          <span class="alert-icon">⚠️</span>
+          <div>西部林道は安房から片道1時間以上。<strong>大川の滝 or 西部林道のどちらかに絞る</strong>か、出発を早めること。</div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">10:00</div>
+            <div class="tl-content"><strong>安房川リバーカヤック</strong>🚣</div>
+            <div class="tl-note">防水バッグ持参！スマホ・財布の水没注意</div>
+          </div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">12:30</div><div class="tl-content">カヤック終了・着替え</div></div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">13:30</div>
+            <div class="tl-content"><strong>島内絶景ドライブ観光</strong>🚗</div>
+            <div class="tl-note">大川の滝（安房から約40分） または 西部林道（安房から約60分）</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot yellow"></div>
+            <div class="tl-time">16:30</div>
+            <div class="tl-content"><strong>🔥 BBQ打ち上げ！</strong></div>
+            <div class="tl-note">屋久島キャンピングパーク（屋根付き・雨でも安心）</div>
+          </div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">20:00</div><div class="tl-content">撤収・コテージへ</div></div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">20:30〜</div>
+            <div class="tl-content">写真共有＋余ったお酒で二次会🥃</div>
+            <div class="tl-note">✅ 明日の荷造りを当日夜に済ませる（翌朝バタバタ防止）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4/16 -->
+    <div class="card">
+      <div class="card-header teal">4月16日（木）― 帰還</div>
+      <div class="card-body">
+        <div class="alert alert-blue" style="margin-bottom:14px;">
+          <span class="alert-icon">ℹ️</span>
+          <div>スケジュールがタイト。<strong>前日夜に荷造り完了</strong>が必須。2グループ別々の帰路（空港 or 安房港）を事前に確認しておくこと。</div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">07:30</div><div class="tl-content">起床・朝食・最終荷造り</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">08:30</div><div class="tl-content"><strong>チェックアウト</strong>（忘れ物チェック・お土産購入）</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">09:00</div><div class="tl-content">レンタカー返却出発</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">09:30</div><div class="tl-content">レンタカー返却完了</div></div>
+          <div class="tl-item"><div class="tl-dot red"></div><div class="tl-time">10:00</div><div class="tl-content"><strong>屋久島出発</strong>✈️⛴</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="section">
+    <div class="section-title">🎒 持ち物チェックリスト</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+      <div class="card">
+        <div class="card-header">登山装備（現地レンタル可）</div>
+        <div class="card-body">
+          <ul class="checklist">
+            <li>トレッキングシューズ</li>
+            <li>レインウェア 上下</li>
+            <li>リュックサック 30L以上</li>
+            <li>防寒着・フリース（山頂は5〜10℃）</li>
+            <li>ゲイター（スパッツ）</li>
+            <li>トレッキングポール</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" style="background:#c0392b;">必携アイテム（要持参）</div>
+        <div class="card-body">
+          <ul class="checklist">
+            <li>⚡ ヘッドライト＋予備電池</li>
+            <li>🚽 携帯トイレ（1人2〜3枚）</li>
+            <li>🔋 モバイルバッテリー</li>
+            <li>🍫 行動食（チョコ・ナッツ等）</li>
+            <li>🗑 ゴミ袋・ジップロック</li>
+            <li>🦟 虫除けスプレー</li>
+            <li>💧 防水バッグ・防水ケース（カヤック用）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header blue">個人持ち物</div>
+        <div class="card-body">
+          <ul class="checklist">
+            <li>保険証</li>
+            <li>現金（島内ATMは安房/宮之浦のみ）</li>
+            <li>常備薬・酔い止め</li>
+            <li>着替え（3泊分）</li>
+            <li>タオル・サンダル</li>
+            <li>日焼け止め・サングラス</li>
+            <li>山岳保険の加入確認</li>
+            <li>📱 オフライン地図DL済み</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header yellow">お土産リスト（花田先輩リクエスト）</div>
+        <div class="card-body">
+          <ul class="checklist">
+            <li>三岳酒造 ― 三岳（焼酎）</li>
+            <li>寺田商店</li>
+            <li>愛子 ― にっしゃん 🍶<br><span style="font-size:0.8rem;color:#999;">「無茶苦茶美味い」by 花田先輩</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODO -->
+  <div class="section">
+    <div class="section-title">✅ 事前TODO</div>
+    <div class="card">
+      <div class="card-header" style="background:#c0392b;">🔴 最優先（今すぐ確認）</div>
+      <div class="card-body">
+        <ul class="checklist">
+          <li>荒川登山口シャトルバスの時刻・乗り場確認 <span class="badge badge-red">必須</span></li>
+          <li>縄文杉ガイド：永廣組4名分の申込み確認 <span class="badge badge-red">必須</span></li>
+          <li>登山弁当：前日予約が必要か確認（当日15:30では間に合わない可能性）<span class="badge badge-red">必須</span></li>
+          <li>花田先輩の参加可否を確定 <span class="badge badge-red">必須</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="card-header yellow">🟡 要対応</div>
+      <div class="card-body">
+        <ul class="checklist">
+          <li>飛行機予約（各自・帰路含む）</li>
+          <li>レンタカー手配（2台・バンタイプ推奨）</li>
+          <li>リバーカヤック予約確認（4月は繁忙期）</li>
+          <li>登山装備レンタル事前予約（6〜7名分）</li>
+          <li>BBQ器材・炭の手配確認（屋久島キャンピングパーク）</li>
+          <li>フェリーチケット（永廣組・帰路分も）</li>
+          <li>費用精算方法を全員で合意（Splitwise等）</li>
+          <li>山岳保険への加入確認（全員）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="card-header" style="background:var(--green-light);">🟢 当日</div>
+      <div class="card-body">
+        <ul class="checklist">
+          <li>登山弁当受け取り（時刻・場所を事前確認）</li>
+          <li class="done">携帯トイレ購入（島内登山ショップで）</li>
+          <li>屋久島環境保全協力金：1,000円/人 用意</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- COST -->
+  <div class="section">
+    <div class="section-title">💰 費用概算</div>
+    <div class="card">
+      <div class="card-body" style="padding:0;">
+        <table class="tbl">
+          <thead><tr><th>項目</th><th>金額目安</th><th>備考</th></tr></thead>
+          <tbody>
+            <tr><td>ガイド＋装備レンタル</td><td>約13,000〜25,000円/人</td><td>相場要確認</td></tr>
+            <tr><td>環境保全協力金</td><td>1,000円/人</td><td>現地で徴収</td></tr>
+            <tr><td>シャトルバス</td><td>数百円/人（往復）</td><td>現地払い</td></tr>
+            <tr><td>リバーカヤック</td><td>要確認</td><td></td></tr>
+            <tr><td>BBQ（食材・施設）</td><td>要確認</td><td></td></tr>
+            <tr><td>フェリー代（永廣組のみ）</td><td>約14,000円/人（往復）</td><td>チケット要確認</td></tr>
+            <tr class="cost-total"><td colspan="3">💡 精算はアプリ（Splitwise・割り勘くん等）を事前に全員で合意しておくこと</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- RISK -->
+  <div class="section">
+    <div class="section-title">⚠️ 天候リスク対応</div>
+    <div class="alert alert-blue" style="margin-bottom:16px;">
+      <span class="alert-icon">🌧</span>
+      <div>屋久島は「1ヶ月に35日雨が降る」と言われる多雨地帯。4月は特に天候が変わりやすい。ガイドとキャンセルポリシーを事前に確認すること。</div>
+    </div>
+    <div class="card">
+      <div class="card-body" style="padding:0;">
+        <table class="tbl risk-table">
+          <thead><tr><th>シナリオ</th><th>対応</th></tr></thead>
+          <tbody>
+            <tr><td>4/14 縄文杉トレッキング荒天中止</td><td>→ 白谷雲水峡・ヤクスギランド・島内観光に変更</td></tr>
+            <tr><td>4/15 カヤック中止</td><td>→ 島内ドライブ・温泉・早めBBQ</td></tr>
+            <tr><td>フェリー欠航</td><td>→ 飛行機振替（要事前確認）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMERGENCY -->
+  <div class="section">
+    <div class="section-title">🆘 緊急連絡先</div>
+    <div class="card">
+      <div class="card-body" style="padding:0;">
+        <table class="tbl">
+          <thead><tr><th>種別</th><th>名称・番号</th><th>メモ</th></tr></thead>
+          <tbody>
+            <tr><td>🏥 救急病院</td><td><strong>屋久島徳洲会病院</strong><br>0997-47-2988</td><td>島唯一の病院</td></tr>
+            <tr><td>🚢 海上保安</td><td>118</td><td>フェリー・海上事故</td></tr>
+            <tr><td>🚓 警察</td><td>屋久島警察署<br>0997-42-0110</td><td></td></tr>
+            <tr><td>🏨 宿泊先</td><td>（要記入）</td><td>じゃらん予約確認</td></tr>
+            <tr><td>🧭 ガイド会社</td><td>（要記入）</td><td></td></tr>
+            <tr><td>🚗 レンタカー（中村組）</td><td>（要記入）</td><td></td></tr>
+            <tr><td>🚗 レンタカー（永廣組）</td><td>（要記入）</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="section">
+    <div class="section-title">💬 現地注意事項</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="alert alert-yellow"><span class="alert-icon">📶</span><div><strong>携帯電波</strong><br>山中・西部林道はほぼ圏外。オフライン地図を事前DLすること</div></div>
+      <div class="alert alert-yellow"><span class="alert-icon">🦌</span><div><strong>野生動物</strong><br>屋久鹿・屋久猿が出没。餌付け厳禁（罰則あり）</div></div>
+      <div class="alert alert-blue"><span class="alert-icon">💧</span><div><strong>飲料水</strong><br>ペットボトル2L以上持参推奨。沢水は一部飲用可</div></div>
+      <div class="alert alert-blue"><span class="alert-icon">💴</span><div><strong>現金</strong><br>島内ATMは安房・宮之浦のみ。入島前に準備を</div></div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>🌿 屋久島旅のしおり 2026年4月</p>
+  <p style="margin-top:6px; font-size:0.78rem;">AI協議レビュー済み（Claude × Gemini × GPT）／ 作成: Claude Code 2026-03-13</p>
+</footer>
+
+</body>
+</html>
